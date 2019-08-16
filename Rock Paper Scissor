@@ -1,0 +1,40 @@
+
+print("Welcome to Rock, Paper and Scissor!\n")
+i = 1
+
+while i > 0:
+    rock = 1
+    paper = 2
+    scissor = 3
+    quit = 4
+    
+    p1win = "Player 1 wins"
+    p2win = "Player 2 wins"
+    
+    p1 = int(input("Player 1 please select: 1.Rock  2.Paper  3.Scissor 4.quit\n"))
+
+    p2 = int(input("Player 2 please select: 1.Rock  2.Paper  3.Scissor 4.quit\n"))
+    
+    
+    if(p1 == quit or p2 == quit):
+        i = -1
+    elif(p1 == p2):
+        print("It is a tie!")
+    elif (p1 == rock):
+        if(p2 == paper):
+            print(p2win)
+        elif(p2 == scissor):
+            print(p1win)
+    elif(p1 == paper):
+        if(p2 == rock):
+            print(p1win)
+        elif(p2 == scissor):
+            print(p2win)
+    elif(p1 == scissor):
+        if(p2 == rock):
+            print(p2win)
+        elif(p2 == paper):
+            print(p1win)
+            
+        
+    
