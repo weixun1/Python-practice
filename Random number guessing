@@ -1,0 +1,21 @@
+import random
+
+condition = input("Please hit 'enter' to play, or type 'exit' to terminate\n")
+rounds = 0
+right = 0
+wrong = 0
+while condition != "exit":
+    rounds = rounds + 1
+    randnum = random.randint(1,9)
+    usernum = int(input("Please enter a number between 1 and 9\n"))
+    
+    if(usernum == randnum):
+        right = right + 1
+        print("You guessed it right!\n")
+    elif(usernum != randnum):
+        wrong = wrong + 1
+        print("Sorry, you guessed it wrong~\n")
+    
+    condition = input("Please hit 'enter' to play, or type 'exit' to terminate\n")
+
+print("You guessed ",rounds," times, and you guessed ",right," times correctly, and ",wrong, "times incorrrectly.\n")
