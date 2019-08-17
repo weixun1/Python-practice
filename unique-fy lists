@@ -1,0 +1,18 @@
+def unique_list(l1):
+    temp = list(set(l1))
+    return temp
+    
+    
+def loops(l1):
+    temp = []
+    for x in l1:
+        if x not in temp:
+            temp.append(x)
+    return temp
+
+
+
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+
+print(loops(a))
