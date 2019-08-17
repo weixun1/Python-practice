@@ -1,0 +1,23 @@
+def fibonacci(l = int(input("Please enter # of digits\n"))):
+    s = []
+    num3 = 0
+    
+    if(l == 1):
+        s.append(0)
+    elif(l == 2):
+        s.append(0)
+        s.append(1)
+    elif(l >= 3):
+        s.append(0)
+        s.append(1)
+        while l >= 3:
+            num3 = add(s[len(s)-1], s[len(s)-2])
+            s.append(num3)
+            l = l-1
+    
+    print(s)
+    
+def add(num1, num2):
+    return num1+num2
+
+fibonacci()
