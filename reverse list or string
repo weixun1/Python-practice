@@ -1,0 +1,9 @@
+def sentence(str1 = input("Please enter a sentence:\n")):
+    
+    temp = str1.split(" ")
+    temp = temp[::-1]
+    print(" ".join(temp))
+    return
+
+
+sentence()
