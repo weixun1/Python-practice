@@ -1,0 +1,49 @@
+import random
+
+def num_generate():
+    l = list([])
+    i = 0
+    while i < 4:
+        l.append(random.randint(0,9))
+        i = i + 1
+    
+    return l
+
+def check_num(l, check):
+    
+    cows = 0
+    bulls = 0
+    i = 0
+    terminator = 0
+    while i < len(check):
+        if(check[i] in l):
+            if(check[i] == l[i]):
+                cows = cows + 1
+            else:
+                bulls = bulls + 1
+        i = i + 1
+    print(cows, " cows, ", bulls, " bulls\n")
+    if(cows == 4):
+        print("You guessed it right!\n")
+        terminator = 1
+        return terminator
+    else:
+        return terminator
+    
+if __name__ =="__main__":
+    print("Welcome to the Cows and Bulls Game!\n")
+    l = num_generate()
+    t = 0
+    while t == 0:
+        print(l)
+        check = int(list(input("Please enter your guess of 4 digits:\n")))
+        check = [int(x) for x in check]
+        print(check)
+        
+        t = check_num(l,check)
+    
+    
+    
+    
+    
+    
