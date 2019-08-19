@@ -1,0 +1,34 @@
+def grid(length,height):
+    l = 0
+    h = 0
+    vhbar = 1
+    
+    while h < height*2:
+        
+        while l < length:
+            if(vhbar == 1):
+                if(l == length - 1):
+                    print("--- ")
+                elif(l == 0):
+                    print(" --- ",end = "")
+                else:
+                    print("---",end = " ")
+
+            else:
+                if(l == length - 1):
+                    print("|   ",end = "")
+                    print("|")
+                else:
+                    print("|   ",end = "")
+
+            l = l + 1
+        vhbar = vhbar * -1
+        h = h + 1
+        l = 0
+    print(" ",end ="")
+    while l < length:
+        print("--- ",end = "")
+        l = l + 1
+
+
+grid(7,8)
