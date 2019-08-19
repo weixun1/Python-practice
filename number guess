@@ -1,0 +1,34 @@
+def num_guess(num):
+    u = 100
+    l = 0
+    guess = u/2
+    highlow = 0
+    count = 0
+    while highlow!= 3:
+        print("Our guess is: ",int(guess))
+        if(guess != num):
+            print("please describe the guess:")
+            highlow = int(input("1:high 2:low, 3:correct\n"))
+            
+            if(highlow == 1):
+                if(guess > 0 and guess < 1):
+                    guess = 0
+                else:
+                    u = guess
+                    guess = guess - (u - l)/2
+            elif(highlow == 2):
+                if(guess > 99 and guess <100):
+                    guess = 100
+                else:
+                    l = guess
+                    guess = guess + (u - l)/2
+        else:
+            print("please describe the guess:")
+            highlow = int(input("1:high 2:low, 3:correct\n"))
+        count += 1 
+
+        
+    print("Took us ",count, " tries to guess correctly!")
+                
+                
+num_guess(100)
